@@ -18,8 +18,8 @@ declare(strict_types=1);
 require __DIR__.'/vendor/autoload.php';
 
 
-use Helicon\DataMapper\ObjectMapper;
-use Helicon\DataMapper\Tests\Friend;
+use Helicon\ObjectMapper\ObjectMapper;
+use Helicon\ObjectMapper\Tests\Friend;
 use Helicon\ObjectTypeParser\Parser;
 use Helicon\TypeConverter\Converter;
 use Helicon\TypeConverter\Resolver;
