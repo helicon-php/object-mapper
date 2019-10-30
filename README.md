@@ -1,11 +1,11 @@
-# helicon/data-mapper
+# helicon/object-mapper
 
 This library is mapping for array to object.  It's very simple.
 
 # using
 
 ```shell script
-$ composer req helicon/data-mapper
+$ composer req helicon/object-mapper
 ```
 
 ```php 
