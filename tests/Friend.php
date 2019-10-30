@@ -17,6 +17,11 @@ class Friend
     private $name;
 
     /**
+     * @var \DateTime
+     */
+    private $createdAt;
+
+    /**
      * @var self
      */
     private $child;

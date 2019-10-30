@@ -22,9 +22,11 @@ class ObjectMapperTest extends TestCase
         $data = [
             'id' => '1',
             'name' => 'polidog',
+            'createdAt' => date('Y-m-d H:i:s'),
             'child' => [
                 'id' => '3',
                 'name' => 'yamada',
+                'createdAt' => date('Y-m-d H:i:s'),
             ],
         ];
         $mapper = $this->createMapper();
@@ -34,14 +36,15 @@ class ObjectMapperTest extends TestCase
 
     private function createMapper(): ObjectMapper
     {
+        $parser = new Parser();
         $resolver = new Resolver();
         $hydrator = new ReflectionHydrator();
         $resolver->addConverter(new ScalarTypeCaster());
         $resolver->addConverter(new DateTimeCaster());
         $resolver->addConverter(new DateTimeCaster());
-        $resolver->addConverter(new ClassTypeCaster($resolver, $hydrator));
+        $resolver->addConverter(new ClassTypeCaster($resolver, $parser, $hydrator));
 
-        $parser = new Parser();
+
         $converter = new Converter($resolver);
 
         return new ObjectMapper($converter, $parser, $hydrator);

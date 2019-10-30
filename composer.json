@@ -21,7 +21,7 @@
     },
     "require": {
         "php": "~7.3",
-        "helicon/type-converter": "^0.0.1",
+        "helicon/type-converter": "^0.0.3",
         "helicon/object-type-parser": "^0.0.1"
     },
     "require-dev": {
