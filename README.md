@@ -5,7 +5,7 @@ This library is mapping for array to object.  It's very simple.
 # using
 
 ```shell script
-$ composer install helicon/data-mapper
+$ composer req helicon/data-mapper
 ```
 
 ```php 
