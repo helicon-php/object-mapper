@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Helicon\DataMapper\Tests;
+namespace Helicon\ObjectMapper\Tests;
 
 class Friend
 {

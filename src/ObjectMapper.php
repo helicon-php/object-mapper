@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Helicon\DataMapper;
+namespace Helicon\ObjectMapper;
 
 use Helicon\ObjectTypeParser\ParserInterface;
 use Helicon\TypeConverter\ConverterInterface;

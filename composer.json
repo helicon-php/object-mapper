@@ -1,5 +1,5 @@
 {
-    "name": "helicon/data-mapper",
+    "name": "helicon/object-mapper",
     "description": "Simple object mapping.",
     "type": "library",
     "license": "MIT",
@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Helicon\\DataMapper\\": "src/"
+            "Helicon\\ObjectMapper\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Helicon\\DataMapper\\Tests\\": "tests/"
+            "Helicon\\ObjectMapper\\Tests\\": "tests/"
         }
     },
     "require": {
