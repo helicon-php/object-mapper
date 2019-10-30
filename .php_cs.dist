@@ -1,0 +1,18 @@
+<?php
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__)
+    ->exclude('var')
+    ->exclude('assets')
+    ->exclude('config')
+    ->exclude('node_modules');
+
+return PhpCsFixer\Config::create()
+    ->setRules([
+        '@Symfony' => true,
+        '@Symfony:risky' => true,
+        '@DoctrineAnnotation' => true,
+        'array_syntax' => ['syntax' => 'short'],
+        'declare_strict_types' => true,
+    ])
+    ->setFinder($finder)
+    ->setRiskyAllowed(true);

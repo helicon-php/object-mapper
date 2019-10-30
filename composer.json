@@ -1,0 +1,34 @@
+{
+    "name": "helicon/data-mapper",
+    "description": "Simple object mapping.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "polidog",
+            "email": "polidogs@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Helicon\\DataMapper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Helicon\\DataMapper\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "~7.3",
+        "helicon/type-converter": "^0.0.1",
+        "helicon/object-type-parser": "^0.0.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "phpunit/phpunit": "^8.4"
+    },
+    "scripts": {
+        "cs-fix": ["php-cs-fixer fix -v"]
+    }
+}
