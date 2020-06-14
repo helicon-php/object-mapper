@@ -6,7 +6,7 @@ namespace Helicon\ObjectMapper;
 
 use Helicon\ObjectTypeParser\ParserInterface;
 use Helicon\TypeConverter\ConverterInterface;
-use Zend\Hydrator\ReflectionHydrator;
+use Laminas\Hydrator\ReflectionHydrator;
 
 class ObjectMapper implements MapperInterface
 {

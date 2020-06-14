@@ -1,6 +1,6 @@
 # helicon/object-mapper
 
-This library is mapping for array to object.  It's very simple.
+This library is mapping for the array to object.  It's very simple.
 
 # using
 
@@ -63,18 +63,8 @@ $data = [
 ];
 
 // Factory object mapper
-$parser = new Parser();
-$resolver = new Resolver();
-$hydrator = new ReflectionHydrator();
-$resolver->addConverter(new ScalarTypeCaster());
-$resolver->addConverter(new DateTimeCaster());
-$resolver->addConverter(new DateTimeCaster());
-$resolver->addConverter(new ClassTypeCaster($resolver, $parser, $hydrator));
-
-
-$converter = new Converter($resolver);
-
-$mapper = new ObjectMapper($converter, $parser, $hydrator)
+$factory = (new ObjectMapperFactory());
+$mapper = $factory();
 $object = ($mapper)($data, Friend::class)
 var_dump($object); // Friend object.
 

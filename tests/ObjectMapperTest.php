@@ -4,14 +4,7 @@ declare(strict_types=1);
 
 namespace Helicon\ObjectMapper\Tests;
 
-use Helicon\ObjectMapper\ObjectMapper;
-use Helicon\ObjectTypeParser\Parser;
-use Helicon\TypeConverter\Converter;
-use Helicon\TypeConverter\Resolver;
-use Helicon\TypeConverter\TypeCaster\ClassTypeCaster;
-use Helicon\TypeConverter\TypeCaster\DateTimeCaster;
-use Helicon\TypeConverter\TypeCaster\ScalarTypeCaster;
-use Laminas\Hydrator\ReflectionHydrator;
+use Helicon\ObjectMapper\ObjectMapperFactory;
 use PHPUnit\Framework\TestCase;
 
 class ObjectMapperTest extends TestCase
@@ -28,23 +21,9 @@ class ObjectMapperTest extends TestCase
                 'createdAt' => date('Y-m-d H:i:s'),
             ],
         ];
-        $mapper = $this->createMapper();
+        $factory = (new ObjectMapperFactory());
+        $mapper = $factory();
         $object = ($mapper)($data, Friend::class);
         $this->assertInstanceOf(Friend::class, $object);
-    }
-
-    private function createMapper(): ObjectMapper
-    {
-        $parser = new Parser();
-        $resolver = new Resolver();
-        $hydrator = new ReflectionHydrator();
-        $resolver->addConverter(new ScalarTypeCaster());
-        $resolver->addConverter(new DateTimeCaster());
-        $resolver->addConverter(new DateTimeCaster());
-        $resolver->addConverter(new ClassTypeCaster($resolver, $parser, $hydrator));
-
-        $converter = new Converter($resolver);
-
-        return new ObjectMapper($converter, $parser, $hydrator);
     }
 }
