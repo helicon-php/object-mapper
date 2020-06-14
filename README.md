@@ -1,4 +1,5 @@
 # helicon/object-mapper
+![test](https://github.com/helicon-php/object-mapper/workflows/test/badge.svg)
 
 This library is mapping for the array to object.  It's very simple.
 
