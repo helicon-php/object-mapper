@@ -64,8 +64,7 @@ $data = [
 ];
 
 // Factory object mapper
-$factory = (new ObjectMapperFactory());
-$mapper = $factory();
+$mapper = (new ObjectMapperFactory())();
 $object = ($mapper)($data, Friend::class)
 var_dump($object); // Friend object.
 
