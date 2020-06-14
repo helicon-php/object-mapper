@@ -25,11 +25,6 @@ class ObjectMapper implements MapperInterface
      */
     private $reflectionHydrator;
 
-    /**
-     * @param ConverterInterface $converter
-     * @param ParserInterface    $parser
-     * @param ReflectionHydrator $reflectionHydrator
-     */
     public function __construct(ConverterInterface $converter, ParserInterface $parser, ReflectionHydrator $reflectionHydrator)
     {
         $this->converter = $converter;
@@ -37,6 +32,11 @@ class ObjectMapper implements MapperInterface
         $this->reflectionHydrator = $reflectionHydrator;
     }
 
+    /**
+     * @return mixed|object
+     *
+     * @throws \ReflectionException
+     */
     public function __invoke(array $data, string $className)
     {
         $refClass = new \ReflectionClass($className);

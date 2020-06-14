@@ -26,7 +26,7 @@ use Helicon\TypeConverter\Resolver;
 use Helicon\TypeConverter\TypeCaster\ClassTypeCaster;
 use Helicon\TypeConverter\TypeCaster\DateTimeCaster;
 use Helicon\TypeConverter\TypeCaster\ScalarTypeCaster;
-use Zend\Hydrator\ReflectionHydrator;
+use Laminas\Hydrator\ReflectionHydrator;
 
 class Friend 
 {

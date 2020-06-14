@@ -11,8 +11,8 @@ use Helicon\TypeConverter\Resolver;
 use Helicon\TypeConverter\TypeCaster\ClassTypeCaster;
 use Helicon\TypeConverter\TypeCaster\DateTimeCaster;
 use Helicon\TypeConverter\TypeCaster\ScalarTypeCaster;
+use Laminas\Hydrator\ReflectionHydrator;
 use PHPUnit\Framework\TestCase;
-use Zend\Hydrator\ReflectionHydrator;
 
 class ObjectMapperTest extends TestCase
 {
@@ -42,7 +42,6 @@ class ObjectMapperTest extends TestCase
         $resolver->addConverter(new DateTimeCaster());
         $resolver->addConverter(new DateTimeCaster());
         $resolver->addConverter(new ClassTypeCaster($resolver, $parser, $hydrator));
-
 
         $converter = new Converter($resolver);
 
