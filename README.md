@@ -21,13 +21,6 @@ require __DIR__.'/vendor/autoload.php';
 
 use Helicon\ObjectMapper\ObjectMapper;
 use Helicon\ObjectMapper\Tests\Friend;
-use Helicon\ObjectTypeParser\Parser;
-use Helicon\TypeConverter\Converter;
-use Helicon\TypeConverter\Resolver;
-use Helicon\TypeConverter\TypeCaster\ClassTypeCaster;
-use Helicon\TypeConverter\TypeCaster\DateTimeCaster;
-use Helicon\TypeConverter\TypeCaster\ScalarTypeCaster;
-use Laminas\Hydrator\ReflectionHydrator;
 
 class Friend 
 {
