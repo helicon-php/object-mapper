@@ -6,8 +6,5 @@ namespace Helicon\ObjectMapper;
 
 interface MapperInterface
 {
-    /**
-     * @return mixed object
-     */
-    public function __invoke(array $data, string $className);
+    public function __invoke(array $data, string $className): mixed;
 }

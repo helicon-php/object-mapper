@@ -15,7 +15,7 @@ use Laminas\Hydrator\ReflectionHydrator;
 
 class ObjectMapperFactory
 {
-    protected $typeCasters = [
+    private $typeCasters = [
         ScalarTypeCaster::class,
         DateTimeCaster::class,
     ];
