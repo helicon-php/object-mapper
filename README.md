@@ -9,7 +9,7 @@ This library is mapping for the array to object.  It's very simple.
 $ composer req helicon/object-mapper
 ```
 
-```php 
+```php
 <?php
 
 // ./example.php
@@ -22,27 +22,12 @@ require __DIR__.'/vendor/autoload.php';
 use Helicon\ObjectMapper\ObjectMapper;
 use Helicon\ObjectMapper\Tests\Friend;
 
-class Friend 
+class Friend
 {
-    /**
-     * @var int
-     */
-    private $id;
-
-    /**
-     * @var string
-     */
-    private $name;
-
-    /**
-     * @var \DateTime
-     */
-    private $createdAt;
-
-    /**
-     * @var self
-     */
-    private $child;    
+    private int $id;
+    private string $name;
+    private \DateTime $createdAt;
+    private self $child;
 }
 
 $data = [
