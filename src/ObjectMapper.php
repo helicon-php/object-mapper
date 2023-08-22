@@ -8,9 +8,9 @@ use Helicon\ObjectTypeParser\ParserInterface;
 use Helicon\TypeConverter\ConverterInterface;
 use Laminas\Hydrator\ReflectionHydrator;
 
-class ObjectMapper implements MapperInterface
+final class ObjectMapper implements MapperInterface
 {
-    public function __construct(private ConverterInterface $converter, private ParserInterface $parser, private ReflectionHydrator $reflectionHydrator)
+    public function __construct(private readonly ConverterInterface $converter, private readonly ParserInterface $parser, private readonly ReflectionHydrator $reflectionHydrator)
     {
     }
 

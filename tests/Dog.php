@@ -10,7 +10,7 @@ class Dog
 
     private string $name;
 
-    private \DateTimeImmutable  $createdAt;
+    private \DateTimeImmutable $createdAt;
 
     private self $child;
 }

@@ -7,7 +7,7 @@ namespace Helicon\ObjectMapper\Tests;
 use Helicon\ObjectMapper\ObjectMapperFactory;
 use PHPUnit\Framework\TestCase;
 
-class ObjectMapperTest extends TestCase
+final class ObjectMapperTest extends TestCase
 {
     /**
      * @group 7.3
