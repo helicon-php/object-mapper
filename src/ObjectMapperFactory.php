@@ -13,14 +13,9 @@ use Helicon\TypeConverter\TypeCaster\DateTimeCaster;
 use Helicon\TypeConverter\TypeCaster\ScalarTypeCaster;
 use Laminas\Hydrator\ReflectionHydrator;
 
-class ObjectMapperFactory
+final class ObjectMapperFactory
 {
-    private $typeCasters = [
-        ScalarTypeCaster::class,
-        DateTimeCaster::class,
-    ];
-
-    public function __invoke(?ParserInterface $parser = null): ObjectMapper
+    public function __invoke(ParserInterface $parser = null): ObjectMapper
     {
         if (null === $parser) {
             $parser = new Parser();
@@ -29,7 +24,10 @@ class ObjectMapperFactory
         $resolver = new Resolver();
         $hydrator = new ReflectionHydrator();
 
-        foreach ($this->typeCasters as $typeCaster) {
+        foreach ([
+            ScalarTypeCaster::class,
+            DateTimeCaster::class,
+         ] as $typeCaster) {
             $resolver->addTypeCaster(new $typeCaster());
             $resolver->addTypeCaster(new $typeCaster());
         }
